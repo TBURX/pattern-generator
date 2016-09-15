@@ -1,0 +1,14 @@
+D:\projects\draw pattern\draw pattern\bin\Release\draw pattern.exe.config
+D:\projects\draw pattern\draw pattern\bin\Release\draw pattern.exe
+D:\projects\draw pattern\draw pattern\bin\Release\draw pattern.pdb
+D:\projects\draw pattern\draw pattern\obj\Release\draw_pattern.ColorControl.resources
+D:\projects\draw pattern\draw pattern\obj\Release\draw_pattern.Form1.resources
+D:\projects\draw pattern\draw pattern\obj\Release\draw_pattern.Properties.Resources.resources
+D:\projects\draw pattern\draw pattern\obj\Release\draw pattern.csproj.GenerateResource.Cache
+D:\projects\draw pattern\draw pattern\obj\Release\draw pattern.exe
+D:\projects\draw pattern\draw pattern\obj\Release\draw pattern.pdb
+D:\projects\draw pattern\draw pattern\bin\Release\draw pattern.exe.manifest
+D:\projects\draw pattern\draw pattern\bin\Release\draw pattern.application
+D:\projects\draw pattern\draw pattern\obj\Release\draw pattern.csprojResolveAssemblyReference.cache
+D:\projects\draw pattern\draw pattern\obj\Release\draw pattern.exe.manifest
+D:\projects\draw pattern\draw pattern\obj\Release\draw pattern.application

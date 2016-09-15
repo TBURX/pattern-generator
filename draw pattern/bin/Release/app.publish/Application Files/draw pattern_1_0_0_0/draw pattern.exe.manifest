@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="draw pattern.exe" version="1.0.0.0" publicKeyToken="eeedabfb0d4f55b6" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="draw pattern" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="draw pattern.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="draw pattern.exe" size="20944">
+      <assemblyIdentity name="draw pattern" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>UOi/UmTp4m3draF5TStRYqf1lmxXRv8k6zM/NokWcQs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="draw pattern.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=PROGNOZ\subbotin.v" issuerKeyHash="7759f2aea9023de8616d9385caabb29375c5dec7" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>JLFoX3t23Usw7Tkl0O3rAKBxnXv7XE3fUy6Qt+9P/Wk=</DigestValue></Reference></SignedInfo><SignatureValue>0kxAQf9te0bp6lvNLp08pS+15pgEJaM3hNbY2aJ/P5vBOOKrUQv4kr86tajNtIR6zHXF4ymMG1XkQJej/OrjyQClo0M5T1qdmxGB/SmZ3AqDunkmTBqxU0qHfvVMYW1z2VvhNGYY7YPuQIECr9OQT1dEY4NOqT3wjxCJMm8r2P4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>2K+rrZeTr5Gk8pFhPcB56uUCb4SRoDnGWKI8sseAHiK9hzDxiC131ZGvqV9wjYsbwxr5IARvi1NgHfBh79YKCo8iEs+CdKFKUx7l7RDdib1b9a9tYKhO2U1wx0bpUC+6JCB+TboKx06gZhOVQyiqZIst+I6oU8xfuInd/MKdNhU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="69fd4fefb7902e53df4d5cfb7b9d71a000ebedd02539ed304bdd767b5f68b124" Description="" Url=""><as:assemblyIdentity name="draw pattern.exe" version="1.0.0.0" publicKeyToken="eeedabfb0d4f55b6" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=PROGNOZ\subbotin.v</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>YnbvfuMhw68PNs64Jd2x6/F3x2uMFS8bC9Cy5X4p94c=</DigestValue></Reference></SignedInfo><SignatureValue>twJh6P6ESMsp/O0FqIHDXHRg2nZlJDWRrfOJyp4j0Eob7+uNM4LatFUJxQuT+aWgnQ8w16DaHpHsRJlqZ3b+RSs5Lz3to/ZZjqttcfVyGpJeb7s/gaMHTvv8vs2xBYCtH2UttcQ7DwVAXInTDVqns+FltnSSOjwFBXxXdMOsJw0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>2K+rrZeTr5Gk8pFhPcB56uUCb4SRoDnGWKI8sseAHiK9hzDxiC131ZGvqV9wjYsbwxr5IARvi1NgHfBh79YKCo8iEs+CdKFKUx7l7RDdib1b9a9tYKhO2U1wx0bpUC+6JCB+TboKx06gZhOVQyiqZIst+I6oU8xfuInd/MKdNhU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQY+IDgegHBLJPraDU7loHtTANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQAUABSAE8ARwBOAE8AWgBcAHMAdQBiAGIAbwB0AGkAbgAuAHYwHhcNMTYwOTE0MTIzNjEyWhcNMTcwOTE0MTgzNjEyWjAvMS0wKwYDVQQDHiQAUABSAE8ARwBOAE8AWgBcAHMAdQBiAGIAbwB0AGkAbgAuAHYwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBANivq62Xk6+RpPKRYT3AeerlAm+EkaA5xliiPLLHgB4ivYcw8Ygtd9WRr6lfcI2LG8Ma+SAEb4tTYB3wYe/WCgqPIhLPgnShSlMe5e0Q3Ym9W/WvbWCoTtlNcMdG6VAvuiQgfk26CsdOoGYTlUMoqmSLLfiOqFPMX7iJ3fzCnTYVAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAssYkwTMH0tnZHClF2lbpUGAbS/YPogsjVy3nxuB7U80y2E48GDkL8FVcsvykPkXSlbMyO36dE60IEcE7A+rznQ4px8RpKvNA4tsTIqamo7xNWz3QEcZjFSpr7uU2fdLNADa/XG6Tf4wBj0fSlZpP1IiT1YzMNcI+fx81I/XPWrY=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

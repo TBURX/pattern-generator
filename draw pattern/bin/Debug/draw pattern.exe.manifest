@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="draw pattern.exe" size="22992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="draw pattern.exe" size="26064">
       <assemblyIdentity name="draw pattern" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qFeiACNf+RtMeb9nyzxYjmbj1Pyl2YTGhVfZucdVVWI=</dsig:DigestValue>
+        <dsig:DigestValue>sixpB6VJXqMvjvuen7NHIFe+JUh4lsE09WXtKPDeAqM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

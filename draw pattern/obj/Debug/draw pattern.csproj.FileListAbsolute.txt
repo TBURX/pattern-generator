@@ -12,3 +12,18 @@ D:\projects\draw pattern\draw pattern\obj\Debug\draw pattern.exe.manifest
 D:\projects\draw pattern\draw pattern\obj\Debug\draw pattern.application
 D:\projects\draw pattern\draw pattern\obj\Debug\draw pattern.csprojResolveAssemblyReference.cache
 D:\projects\draw pattern\draw pattern\obj\Debug\draw_pattern.GradientControl.resources
+D:\projects\pattern-generator\draw pattern\obj\Debug\draw_pattern.GradientControl.resources
+D:\projects\pattern-generator\draw pattern\obj\Debug\draw_pattern.Form1.resources
+D:\projects\pattern-generator\draw pattern\obj\Debug\draw_pattern.Properties.Resources.resources
+D:\projects\pattern-generator\draw pattern\obj\Debug\draw pattern.csproj.GenerateResource.cache
+D:\projects\pattern-generator\draw pattern\obj\Debug\draw pattern.csproj.CoreCompileInputs.cache
+D:\projects\pattern-generator\draw pattern\obj\Debug\draw pattern.exe
+D:\projects\pattern-generator\draw pattern\obj\Debug\draw pattern.pdb
+D:\projects\pattern-generator\draw pattern\obj\Debug\draw pattern.csproj.AssemblyReference.cache
+D:\projects\pattern-generator\draw pattern\bin\Debug\draw pattern.exe.config
+D:\projects\pattern-generator\draw pattern\bin\Debug\draw pattern.exe.manifest
+D:\projects\pattern-generator\draw pattern\bin\Debug\draw pattern.application
+D:\projects\pattern-generator\draw pattern\bin\Debug\draw pattern.exe
+D:\projects\pattern-generator\draw pattern\bin\Debug\draw pattern.pdb
+D:\projects\pattern-generator\draw pattern\obj\Debug\draw pattern.exe.manifest
+D:\projects\pattern-generator\draw pattern\obj\Debug\draw pattern.application

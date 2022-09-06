@@ -26,6 +26,8 @@ namespace draw_pattern
         Random rand = new Random();
         byte colorDispersion;
 
+        float mixPwr = 1;
+
         struct PolygonType
         {
             public const byte RIGHT_TRIANGLE = 1;
@@ -138,57 +140,33 @@ namespace draw_pattern
         {
             float a = 0, r = 0, g = 0, b = 0;
 
-            if (gradients.Count < 3)
-            {
-                float summaryLenght = 0;
+            float maxLength = 0;
+            float minLength = -1;
+            var distances = new List<float>();
 
-                for (int i = 0; i < gradients.Count; i++)
-                {
-                    summaryLenght += (float)Math.Sqrt(Math.Pow(point.X - gradients[i].relativeX * pictureBox1.Width, 2) + Math.Pow(point.Y - gradients[i].relativeY * pictureBox1.Height, 2));
-                }
-                for (int i = 0; i < gradients.Count; i++)
-                {
-                    float proportion = (float)Math.Sqrt(Math.Pow(point.X - gradients[i].relativeX * pictureBox1.Width, 2) + Math.Pow(point.Y - gradients[i].relativeY * pictureBox1.Height, 2)) / summaryLenght/*gradients.Count*/;
-                    a += (1 - proportion) * gradients[i].color.A;
-                    r += (1 - proportion) * gradients[i].color.R;
-                    g += (1 - proportion) * gradients[i].color.G;
-                    b += (1 - proportion) * gradients[i].color.B;
-                }
-            }
-            else
+            foreach (var gradient in gradients)
             {
-                List <GradientControl> nearestGradients = FindNearest3(point);
-                if (nearestGradients.Count == 3)
-                {
-                    List<PointF> perpendiculars1 = new List<PointF>();
-                    for (int i = 0; i < nearestGradients.Count; i++)
-                    {
-                        PointF p1 = new PointF(nearestGradients[i].relativeX * pictureBox1.Width, nearestGradients[i].relativeY * pictureBox1.Height);
-                        PointF p2 = new PointF(nearestGradients[(i + 1) % nearestGradients.Count].relativeX * pictureBox1.Width, nearestGradients[(i + 1) % nearestGradients.Count].relativeY * pictureBox1.Height);
-                        PointF p3 = new PointF(nearestGradients[(i + 2) % nearestGradients.Count].relativeX * pictureBox1.Width, nearestGradients[(i + 2) % nearestGradients.Count].relativeY * pictureBox1.Height);
-                        perpendiculars1.Add(PerpendicularToLineCross(p1, p2, p3));
-                    }
-                    List<PointF> perpendiculars2 = new List<PointF>();
-                    for (int i = 0; i < nearestGradients.Count; i++)
-                    {
-                        PointF p1 = new PointF(nearestGradients[i].relativeX * pictureBox1.Width, nearestGradients[i].relativeY * pictureBox1.Height);
-                        perpendiculars2.Add(PerpendicularToLineCross(point, p1, perpendiculars1[i]));
-                    }
-                    List<float> percentages = new List<float>();
-                    for (int i = 0; i < nearestGradients.Count; i++)
-                    {
-                        PointF p1 = new PointF(nearestGradients[i].relativeX * pictureBox1.Width, nearestGradients[i].relativeY * pictureBox1.Height);
-                        percentages.Add(1 - LineLenght(p1, perpendiculars2[i]) / LineLenght(p1, perpendiculars1[i]));
-                    }
-                    for (int i = 0; i < nearestGradients.Count; i++)
-                    {
-                        a += percentages[i] * nearestGradients[i].color.A;
-                        r += percentages[i] * nearestGradients[i].color.R;
-                        g += percentages[i] * nearestGradients[i].color.G;
-                        b += percentages[i] * nearestGradients[i].color.B;
-                    }
-                }
+                var len = (float)Math.Sqrt(Math.Pow(point.X - gradient.relativeX * pictureBox1.Width, 2) + Math.Pow(point.Y - gradient.relativeY * pictureBox1.Height, 2));
+                if (len > maxLength) maxLength = len;
+                if (minLength < 0 || len < minLength) minLength = len;
+                distances.Add(len);
             }
+            //normalize
+            for (int i = 0; i < distances.Count; i++)
+            {
+                distances[i] /= maxLength;
+            }
+            var sum = distances.Aggregate((float)0, (acc, x)=> acc + x);
+            for (int i = 0; i < distances.Count; i++)
+            {
+
+                var proportion = distances[i] / sum;
+                a += (1 - proportion) * (float)Math.Pow(1 - distances[i], mixPwr) * gradients[i].color.A;
+                r += (1 - proportion) * (float)Math.Pow(1 - distances[i], mixPwr) * gradients[i].color.R;
+                g += (1 - proportion) * (float)Math.Pow(1 - distances[i], mixPwr) * gradients[i].color.G;
+                b += (1 - proportion) * (float)Math.Pow(1 - distances[i], mixPwr) * gradients[i].color.B;
+            }
+
             return useNoiseCheckBox.Checked
                 ? Color.FromArgb(
                     (byte)Clamp(a + rand.Next(-colorDispersion,colorDispersion), 0, 255), 
@@ -412,6 +390,12 @@ namespace draw_pattern
 
         private void GrEventHandler(object sender, EventArgs e)
         {
+            render();
+        }
+
+        private void MixPwrTrackBar_Scroll(object sender, EventArgs e)
+        {
+            mixPwr = 1 - (float)MixPwrTrackBar.Value / 100;
             render();
         }
     }
